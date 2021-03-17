@@ -16,10 +16,10 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 # Inherit dalvik from native
 $(call inherit-product, device/xiaomi/lavender/dalvikheap.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/ssos/config/common.mk)
+# Inherit some common ShapeShiftOS stuff.
+$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-DEVICE_MAINTAINER := zaidkhan0997
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := ssos_lavender
