@@ -214,7 +214,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
     persist.sys.fflag.override.settings_network_and_internet_v2=true \
     ril.subscription.types=NV,RUIM \
-    telephony.lteOnCdmaDevice=1
+    telephony.lteOnCdmaDevice=1 \
+    ro.cipher.maintainer=whtisusername
 
 # Radio IMS
 PRODUCT_PROPERTY_OVERRIDES += \
