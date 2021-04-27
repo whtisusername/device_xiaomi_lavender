@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ssos_lavender.mk
+    $(LOCAL_DIR)/palladium_lavender.mk

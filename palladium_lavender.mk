@@ -16,13 +16,31 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 # Inherit dalvik from native
 $(call inherit-product, device/xiaomi/lavender/dalvikheap.mk)
 
-# Inherit some common ShapeShiftOS stuff.
-$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
+# Inherit some common PalladiumOS stuff.
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# PalladiumOS Properties
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := true
+PALLADIUM_BUILDTYPE := OFFICIAL
+TARGET_USES_BLUR := true
+PALLADIUM_BUILD_VARIANT := GAPPS
+
+# Maintainer & Device Props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.maintainer=whtisusername \
+    ro.palladiumdevice.cpu=SDM660 \
+    ro.palladiumdevice.display=6.3 \
+    ro.palladiumdevice.displaytype=FULLHD+ \
+    ro.palladiumdevice.battery=4000mAh \
+    ro.palladiumdevice.camera=12MP/48MP+5MP
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := ssos_lavender
+PRODUCT_NAME := palladium_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
