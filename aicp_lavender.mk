@@ -29,23 +29,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
-# Build Fingerprint
-PRODUCT_BUILD_PROP_OVERRIDES += \
-        TARGET_DEVICE="lavender" \
-        PRODUCT_NAME="lavender" \
-	PRIVATE_BUILD_DESC="lavender-user 9 PKQ1.180904.001 V10.3.9.0.PFGMIXM release-keys" 
-
-# Device identifier
-PRODUCT_NAME := aicp_lavender
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_PLATFORM := SDM660
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := corvus_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 7
+PRODUCT_MODEL := lavender
+PRODUCT_MANUFACTURER := Xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := lavender
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+         PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.210605.005 7349499 release-keys" \
+    PRODUCT_NAME="beryllium"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
