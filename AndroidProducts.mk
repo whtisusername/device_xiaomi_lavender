@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp_lavender.mk
+    $(LOCAL_DIR)/corvus_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    acip_lavender-user \
-    acip_lavender-userdebug \
-    acip_lavender-eng
+    corvus_lavender-user \
+    corvus_lavender-userdebug \
+    corvus_lavender-eng
